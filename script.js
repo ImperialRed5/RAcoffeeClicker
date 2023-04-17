@@ -163,11 +163,8 @@ function buyButtonClick(event, data) {
 
 function tick(data) {
   // increment the data object's (passed into this function)
-
+  data.coffee += data.totalCPS;
   // coffee property by the data.totalCPS amount
-  let coffee = data.coffee;
-  let totalCPS = data.totalCPS;
-  coffee += totalCPS;
   // call the updateCoffeeView function and pass it the data.coffee property
   updateCoffeeView(data.coffee);
   // call the renderProducers function and pass it the newly updated data object
@@ -183,7 +180,7 @@ bigCoffee.addEventListener("click", () => clickCoffee(data));
 
 // add a 'click' event listener to the element (referenced at the top of the file)
 // the event listener should call the buyButtonClick function and pass it the event, and the global data object
-producerContainer.addEventListener("click", () => buyButtonClick(data));
+producerContainer.addEventListener("click", (event) => buyButtonClick(event, data));
 // You do not need to edit this last line. This simple runs your tick function every 1000ms, or 1s
 setInterval(() => tick(data), 1000);
 
