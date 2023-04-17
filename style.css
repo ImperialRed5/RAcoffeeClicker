@@ -35,14 +35,16 @@ body {
 
 .column-header {
   font-size: 25px;
-  position: relative;
-  background-color: white;
+  margin-bottom: 5px;
   top: 8px;
 }
 #big_coffee {
   user-select: none;
   font-size: 128px;
   cursor: pointer;
+  border: solid 2px black;
+  border-radius: 10px;
+  background-color: beige;
 }
 
 .counter-container {
@@ -68,6 +70,7 @@ body {
   border-radius: 4px;
   display: flex;
   justify-content: space-between;
+  background-color: beige;
 }
 .producer-column {
   display: flex;
