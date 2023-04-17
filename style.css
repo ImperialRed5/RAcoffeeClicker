@@ -3,6 +3,7 @@
 }
 body {
   margin: 0px;
+  background-color:tan;
 }
 .column-container {
   display: flex;
